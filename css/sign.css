@@ -1,0 +1,40 @@
+/*--------- from global-------------*/
+.main-color{color: #4E66F8} 
+.darker-main-color:hover{color: #092af0}
+.main-box-shadow:focus{border-color: #98a6fb; box-shadow: 0 0 0 0.2rem rgba(78,102,248,0.25)}
+
+.main-border-color{color: #4E66F8; border-color: #4E66F8}
+.main-border-color:hover{background-color: #4e66f8; color: #fff}
+/* used for sign in btn */
+.main-bg-border{background-color: #4E66F8; border-color: #4E66F8} /*main color in border & bg*/
+.btn-darker:hover{color: #fff; background-color: #2946f7; border-color: #1d3cf6}
+.btn-darkest:active{color: #fff; background-color: #1d3cf6; border-color: #1131f6}
+
+
+.letter-sp{letter-spacing: 0.1875rem} /* letter spacing */
+.txt-sm{font-size: .875rem;} /* small text */
+
+/* ----------------------------------- login form ------------------------------*/
+.login-container .logo a i{font-size: 1.7rem; font-weight: 700}
+.login-container form label:not(label.form-check-label){letter-spacing: 0.1rem}
+/* ---- checkbox custome styling -----*/
+.custom-control-input:checked~.custom-control-label::before {color: #fff; border-color: #4e66f8; background-color: #4e66f8} 
+.custom-checkbox .custom-control-input~.custom-control-label::before{ border-radius: 50%}
+.custom-checkbox .custom-control-input:focus~.custom-control-label::before{border-color: #98a6fb; box-shadow: 0 0 0 0.2rem rgba(78,102,248,0.25)}
+
+/* sing in btn */
+.login-container button.sign-in{padding-top: 0.75rem; padding-bottom: 0.75rem}
+.form-row .col-5{width: 100%; height: 1px; background-color: rgba(0,0,0,0.1)}
+.form-row .col-2{margin-top: -12px}/* = 1/2 height in negative to center it */
+form button i{font-size: 1.5rem;}
+
+/* ----------------------------------- img form ------------------------------*/
+.sub-container{min-height: 100vh !important}
+.img-container{
+  background-image: url('../images/asset\ 19.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  margin-right: -1rem; /* = padding-right of container-fluid in negative */
+}

@@ -1,0 +1,121 @@
+/*--------------global--------------*/
+body{font-family: 'Poppins', sans-serif; outline: 0; padding-top: 74.02px} /* = the height of navbar*/
+
+/*--------- global in index page -------------*/
+.main-color{color: #4E66F8} /* main color */
+.main-color-selector:hover{color: #4E66F8} /* main-color hover */
+a.main-color-selector:active{background-color: #4E66F8}
+.main-bg-color{background-color: #4E66F8}
+/* .main-color-selector:active{background-color: #4E66F8} */
+.main-bg-border{background-color: #4E66F8; border-color: #4E66F8}/*main color in border & bg*/
+.main-bg-border-selector:active{background-color: #4E66F8; border-color: #4E66F8}
+
+.main-box-shadow:focus,.main-box-shadow:active{border-color: #98a6fb; box-shadow: 0 0 0 0.2rem rgba(78,102,248,0.25)}
+/* change the color of pagination bullet */
+:root { --swiper-theme-color: #4e66f8}
+
+/* main-color darker when hover & active */
+.btn-darker:hover{color: #fff; background-color: #2946f7; border-color: #1d3cf6}
+.btn-darkest:active{color: #fff; background-color: #1d3cf6; border-color: #1131f6}
+
+
+.secondary-color{color: #e83e8c}/* secondry pink color */
+.main-bg{background-color: #e9ecef}/* bg-grey */
+.letter-sp{letter-spacing: 0.1875rem} /* letter spacing */
+.letter-sp-sm{letter-spacing: 0.1rem}
+.txt-sm{font-size: 0.875rem;} /* small text */
+.txt-smaller{font-size: 0.8rem}
+/* card animation */
+.card-animation-transition{transition: all 0.15s ease-in-out;}
+.card-animation-transition:hover{transform: translateY(-5px)}
+/* badge */
+.badge{color: #17a2b8; background-color: #e3f4f6}
+
+
+/*------ global in contact page ---------- */
+
+/* contact form btn */
+.main-border-color{color: #4E66F8; border-color: #4E66F8}
+.main-border-color:hover{background-color: #4e66f8; color: #fff}
+
+/*  main-color darker in contact icon when hover & active */
+.contact-form p i.main-color:hover, .contact-form p i.main-color:active{color: #1d3cf6}
+
+/* change the color of pagination bullet */
+:root { --swiper-theme-color: #4e66f8}
+
+/*--------------------------------------------- Header section -------------------------------*/
+/*------------- search bar ----------*/
+.container-fluid{background-color: #fff; padding: 1rem 2rem}
+.navbar form { border: 1px solid transparent}
+.navbar .input-group input{background-color: transparent}
+.navbar .form-control{padding-left: 0;font-size: small}
+.navbar .form-control:focus{background-color: transparent; outline: 0; box-shadow:  0 0 0 transparent}
+.navbar .input-group-text{border-color: transparent; opacity: 0.7}
+/*--------- nav link --------------*/
+.navbar-nav .nav-link{font-size: 0.9rem ; text-transform: capitalize} 
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link:hover{color: #000;}
+/* ---------- dropdown arrow -------*/
+.navbar .dropdown-menu{margin-top: 1rem}
+.navbar-nav .dropdown-menu::before {
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  border-right: 7px solid transparent;
+  border-bottom: 8px solid #f1f1f1;
+  border-left: 7px solid transparent;
+  position: absolute;
+} 
+/* the position of arrow in home dropdown */
+.navbar-nav .dropdown-menu.hm::before {top: -8px; left: 30px}
+/* the position of arrow in docs dropdown */
+.navbar-nav .dropdown-menu.docs::before {top: -8px; right: 30px}
+/* the position of arrow in profile-img dropdown */
+.navbar-nav .dropdown-menu.img::before {top: -8px; right: 12px}
+
+.navbar-nav .dropdown-item {padding: .5rem 1.5rem}
+.navbar-nav .dropdown-item:active{color: #fff}
+/*------------ template dropdown -------------*/
+/*to get a full-width of screen dropdown-menu becaue li has position relative */
+.tempLi{position: static} 
+.template{
+  margin-top: 0;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 0 1.5rem rgba(0,0,0,0.175);
+  background-color: #f8f9fa;
+}
+.template ul {list-style: none; padding: 0}
+.template h6{letter-spacing: 0.1rem}
+.template a {
+  font-size: 0.8rem;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #868e96;
+  transition: all 0.2s ease-in-out;
+}
+.template a:hover {color: #000}
+/*---------- docs dropdown ------------*/
+.dropdown-header {padding: 0.7rem 1.5rem}
+/*--------- add a listing btn --------- */
+.navbar .btn.add, .navbar .btn.add:focus{font-size: small; color: #fff}
+/*--------------- navbar media query --------------*/
+@media screen and (max-width: 768px){
+  .navbar-expand-lg.fixed-top .navbar-collapse {overflow-y: auto; max-height: 80vh}/* scrollable*/
+  .dropdown-menu{border: 0; box-shadow: none}
+}
+
+/* main-block part */
+footer .main-block h6{letter-spacing: 0.1rem}
+footer .main-block i{color: #6c757d; transition: all 0.12s ease-in-out}
+footer .main-block .btn:hover{background-color: #343a40}
+footer .main-block .btn i{color: #343a40; font-size: 1.2rem; vertical-align: middle}
+footer .main-block .btn:hover i{color: #fff}
+/* copyright part */
+footer .copyright p {color: #dee2e6}
+footer .copyright p i{font-size: 1.7rem}

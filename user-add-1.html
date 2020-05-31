@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--responsive meta tag-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"/> <!--bootstrap css -->
+  <link rel="stylesheet" href="./css/navbar-footer.css"/><!-- nav-footer.css-->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins&display=swap" rel="stylesheet"> <!--google fonts -->
+  <title>Director Theme By Bootstrap</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><!--font awesome -->  
+  <style>
+    /* styling custom select home type & country dropdown */
+    .step-one .my-select{border: 1px solid rgb(206, 212, 218)}
+    .step-one .my-select:active{box-shadow: 0 0 0 0.2rem rgba(216,217,219,.5)}
+    .step-one a.dropdown-toggle:hover{background-color: #ced4da}
+    .step-one .my-select  a{color: initial}
+    .step-one .selected, .selected:hover, .dropdown-item:active {background-color: #4E66F8}
+    .step-one .selected a{color: #fff}
+    .step-one .selected:hover , .selected:active a, .dropdown-item:active {color: initial}
+    /* styling custom radio btn */
+    .step-one .custom-control-input:active~.custom-control-label::before 
+      {color: #fff; background-color: #4E66F8; border-color: #4E66F8; border-color: #98a6fb}
+    .step-one .custom-control-input:checked~.custom-control-label::before 
+      {color: #fff; background-color: #4E66F8; border-color: #4E66F8} 
+    .step-one .custom-control-input:checked:focus + label:before,
+    .step-one .custom-control-input:not(:checked):focus + label:before 
+      {border-color: #98a6fb; box-shadow: 0 0 0 0.2rem rgba(78,102,248,0.25)}
+    /* styling custom country dropdown */
+    .step-one ul.country-dropdown{max-height: 300px; overflow-y: auto; margin: -0.5rem}/* to remove padding: 0.5rem of the parent */
+    .remove.fas{display: none}
+  </style>
+</head>
+<body>
+
+<!-------------------------------------Navbar ---------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top container-fluid shadow">
+  <div class="d-flex align-items-center"> 
+    <a class="navbar-brand text-uppercase font-weight-bold" href="index.html"><!-- brand name & icon -->
+      <img src="./images/asset 0.svg"/>
+    </a>
+    <form class="form-inline d-none d-sm-flex rounded main-bg"> <!-- search bar-->
+      <div class="input-group main-bg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-sm-2 border-0 shadow-0 outline-0" type="search" placeholder="Search" aria-label="Search">
+      </div>  
+    </form>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><!-- toggle button appear in xs, sm,md screens-->
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- appear on click on toggle btn-->
+    <form class="form-inline d-sm-none d-flex mt-3 mb-3"> <!-- search bar on extra small screens-->
+      <div class="input-group main-bg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-sm-2 border-0 shadow-0 outline-0" type="search" placeholder="Search" aria-label="Search">
+      </div>  
+  </form>
+    <ul class="navbar-nav ml-auto"> <!-- items-->
+      <!--------------Home dropdown--------------->
+      <li class="nav-item dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle " href="#" id="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          home <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu hm" aria-labelledby="home">
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">rooms</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">restaurants</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">travel</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">real estate<span class="badge ml-2 rounded-pill">new</span></a>
+        </div>
+      </li>
+      <!--------------- template dropdown ------------->
+      <li class="nav-item dropdown tempLi">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" id="temp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          template <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu template mt-0" aria-labelledby="temp">
+          <div class="row">
+            <!--------- the content ----------->
+            <div class="col-lg-9 p-3">
+              <div class="contaioner-fluid">
+                  <!--first row-->
+                <div class="row p-3 pl-lg-5 pt-lg-5 pr-lg-0 pb-lg-5">
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">homepage</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">rooms</a></li>
+                      <li><a class = "text-capitalize" href="#">restaurants</a></li>
+                      <li><a class = "text-capitalize" href="#">travel</a></li>
+                      <li><a class = "text-capitalize" href="#">real estate<span class="badge ml-2 rounded-pill ">new</span></a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">restaurants</h6>
+                    <ul class="megamenu-list list-unstyled mb-4">
+                      <li><a href="#">Category - Map on the top</a></li>
+                      <li><a href="#">Category - Map on the right   </a></li>
+                      <li><a href="#">Category - no map   </a></li>
+                      <li><a href="#">Restaurant detail</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">rooms</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">Category - Map on the top</a></li>
+                      <li><a class = "text-capitalize" href="#">Category - Map on the right</a></li>
+                      <li><a class = "text-capitalize" href="#">Category - no map</a></li>
+                      <li><a class = "text-capitalize" href="#">Room detail</a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">blog</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">blog</a></li>
+                      <li><a class = "text-capitalize" href="#">post</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">pages</h6>
+                    <ul class="megamenu-list list-unstyled mb-4">
+                      <li><a class = "text-capitalize" href="#">Comparison<span class="badge ml-2 rounded-pill">new</span></a></li>
+                      <li><a class = "text-capitalize" href="#">Team <span class="badge ml-2 rounded-pill">new</span></a></li>
+                      <li><a class = "text-capitalize" href="#">Contact</a></li>
+                      <li><a class = "text-capitalize" href="#">Pricing</a></li>
+                      <li><a class = "text-capitalize" href="#">Text page</a></li>
+                      <li><a class = "text-capitalize" href="#">F.A.Q.s </a></li>
+                      <li><a class = "text-capitalize" href="#">Coming soon</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">user</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#" >Sign in</a></li>
+                      <li><a class = "text-capitalize" href="#">Sign up</a></li>
+                      <li><a class = "text-capitalize" href="#">Booking process - 4 pages</a></li>
+                      <li><a class = "text-capitalize" href="#">Bookings — grid view</a></li>
+                      <li><a class = "text-capitalize" href="#">Booking detail</a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">host</h6>
+                    <ul class="mb-4">
+                      <li><a href="#">Add new listing - 6 pages</a></li>
+                      <li><a href="#">Bookings — list view</a></li>
+                    </ul>
+                  </div>
+                </div>
+                  <!--second row-->
+                <div class="row pl-lg-5 pr-lg-0 pb-lg-5"> 
+                  <div class="col-lg-3">
+                    <div class="d-flex ">
+                      <i class="fas fa-map m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>best rentals</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">find the perfect place</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="fas fa-medal m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>earn points</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">and get great rewards</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="fas fa-headset m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>020-800-456-747</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">24/7 Available Support</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="far fa-credit-card m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>Secure Payment</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">Secure Payment</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                </div>
+              </div>  
+              </div>  
+            </div>
+          
+            <!----------the image -------------->  
+            <div class=" d-none d-lg-flex col-lg-3">
+              <img src="./images/asset 1.jpeg" width="100%" height="100%"/>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!--------------- contact --------------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" href="contact.html">contact</a>
+      </li>
+      <!----------------docs dropdown -------------->
+      <li class="nav-item dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" id="docs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          docs
+        </a>
+        <div class="dropdown-menu dropdown-menu-right docs" aria-labelledby="docs">
+          <h6 class="dropdown-header text-uppercase letter-sp">documentaion</h6>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">introduction</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">directory structure</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">gulp</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">customizing css</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">credits</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">changelog</a>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header text-uppercase letter-sp">components</h6>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">bootstrap</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">theme</a>
+        </div>
+      </li>
+      <!---------------sign in ------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" href="login.html">sign in</a>
+      </li>
+      <!---------------sign up ------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold " href="signup.html">sign up</a>
+      </li>
+      <!---------------profile img dropdown  ---------------------->
+      <li class="nav-item dropdown ml-lg-3">
+        <a class="d-inline-block" width="40px" height="40px" href="#" id="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="./images/asset 39.jpg" alt="profile img" width="40px" height="40px" class="rounded-circle shadow" style="border: 2px solid #fff"/>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right img" aria-labelledby="home">
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">Booking process - 4 pages</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">Bookings - grid view</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">Booking - detail</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-capitalize main-color-selector main-bg-border-selector" href="login.html">
+            <i class="fas fa-sign-in-alt text-muted mr-2"></i>
+            Sign out
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <div class="progress rounded-0 fixed-top" style="height: 0.5rem; top: 74.02px;z-index: 1000;">
+    <div class="progress-bar main-bg-color" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemax="100"></div>
+  </div>
+<!-------------------------------------step-one section  ------------------------------->
+<div class="step-one mt-2 py-5">
+  <div class="container">
+    <!-- 1st row heading-->
+    <div class="row mb-4">
+      <div class="col">
+        <p class="text-uppercase letter-sp font-weight-bold main-color mb-1">add new listing</p>
+        <h2 class="font-weight-bold d-sm-flex justify-content-sm-between align-items-center">
+          Basic information 
+          <span class="text-muted">Step 1</span>
+        </h2>
+      </div>
+    </div>
+    <hr/>
+
+    <!-- 2nd row basic-->
+    <div class="row my-5">
+      <!--1st col-->
+      <div class="col-lg-4">
+        <h4 class="font-weight-bold">Basic</h4>
+        <p class="text-muted txt-sm">His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table.</p>
+      </div>
+      <!--2nd col-->
+      <div class="col-lg-8 pl-lg-5">
+        <form class="pl-lg-5">
+          <!-- property name input field-->
+          <div class="form-group mb-4"> 
+            <label for="propName" class="text-muted txt-smaller text-uppercase letter-sp-sm">property name</label>
+            <input type="text" class="form-control main-box-shadow" id="propName">
+          </div>
+          <!-- home type dropdown -->
+          <div class="form-group mb-4">
+            <label for="homeType" class="text-muted txt-smaller text-uppercase letter-sp-sm">home type</label>
+            <div class="btn-group w-100 rounded my-select" id="homeType">
+              <a 
+                class="btn dropdown-toggle d-flex justify-content-between align-items-center font-weight-bold letter-sp txt-smaller text-uppercase" 
+                data-toggle="dropdown">entire place<span class="caret"></span></a>
+              <ul class="dropdown-menu w-100 home-type" id="menu">
+                <li class="dropdown-item px-3 selected"><a href="#" class="text-decoration-none txt-sm">Entire place</a></li>
+                <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm">Private room</a></li>
+                <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm">Shared room</a></li>
+              </ul>
+            </div>
+            <small class="form-text text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections</small>
+          </div>
+          <!-- radio buttons -->
+          <div class="form-group">
+            <label class="form-label text-muted text-uppercase txt-smaller letter-sp-sm">Is your property set as a dedicated guest space?</label>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Yes, it's primarily set up for guests</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">No, I keep my personal belongings there</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <hr/>
+
+    <!-- 3rd row location-->
+      <div class="row my-5">
+        <!--1st col-->
+        <div class="col-lg-4">
+          <h4 class="font-weight-bold">Location</h4>
+          <p class="text-muted txt-sm"> Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.</p>
+        </div>
+        <!--2nd col-->
+        <div class="col-lg-8 pl-lg-5">
+          <form class="pl-lg-5 ">
+            <!-- country /region dropdown -->
+            <div class="form-group mb-4">
+              <label for="country" class="text-muted txt-smaller text-uppercase letter-sp-sm">country / region</label>
+              <div class="btn-group w-100 rounded my-select" id="country" style="height: 35px">
+                <a class="btn dropdown-toggle d-flex justify-content-between align-items-center font-weight-bold letter-sp txt-smaller text-uppercase" data-toggle="dropdown"><span class="caret"></span></a>
+                <div class="dropdown-menu w-100 p-2" id="menu"> <!-- country dropdown list -->
+                  <div class="d-flex mb-3">
+                    <input type="text" id="myInput" class="form-control main-box-shadow "><!-- search bar to filter list -->
+                    <i id="clear" class="fas fa-times main-color remove" style="margin-left: -20px; line-height: 38px;"></i>
+                  </div>
+                  <ul class="country-dropdown p-0" id="menu">
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Afganistan">Afghanistan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Albania">Albania</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Algeria">Algeria</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="American Samoa">American Samoa</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Andorra">Andorra</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Angola">Angola</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Anguilla">Anguilla</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Antigua & Barbuda">Antigua & Barbuda</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Argentina">Argentina</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Armenia">Armenia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Aruba">Aruba</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Australia">Australia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Austria">Austria</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Azerbaijan">Azerbaijan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bahamas">Bahamas</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bahrain">Bahrain</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bangladesh">Bangladesh</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Barbados">Barbados</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Belarus">Belarus</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Belgium">Belgium</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Belize">Belize</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Benin">Benin</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bermuda">Bermuda</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bhutan">Bhutan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bolivia">Bolivia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bonaire">Bonaire</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bosnia & Herzegovina">Bosnia & Herzegovina</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Botswana">Botswana</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Brazil">Brazil</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="British Indian Ocean Ter">British Indian Ocean Ter</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Brunei">Brunei</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Bulgaria">Bulgaria</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Burkina Faso">Burkina Faso</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Burundi">Burundi</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cambodia">Cambodia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cameroon">Cameroon</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Canada">Canada</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Canary Islands">Canary Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cape Verde">Cape Verde</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cayman Islands">Cayman Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Central African Republic">Central African Republic</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Chad">Chad</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Channel Islands">Channel Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Chile">Chile</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="China">China</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Christmas Island">Christmas Island</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cocos Island">Cocos Island</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Colombia">Colombia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Comoros">Comoros</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Congo">Congo</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cook Islands">Cook Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Costa Rica">Costa Rica</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cote DIvoire">Cote DIvoire</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Croatia">Croatia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cuba">Cuba</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Curaco">Curacao</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Cyprus">Cyprus</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Czech Republic">Czech Republic</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Denmark">Denmark</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Djibouti">Djibouti</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Dominica">Dominica</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Dominican Republic">Dominican Republic</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="East Timor">East Timor</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Ecuador">Ecuador</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Egypt">Egypt</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="El Salvador">El Salvador</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Equatorial Guinea">Equatorial Guinea</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Eritrea">Eritrea</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Estonia">Estonia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Ethiopia">Ethiopia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Falkland Islands">Falkland Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Faroe Islands">Faroe Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Fiji">Fiji</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Finland">Finland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="France">France</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="French Guiana">French Guiana</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="French Polynesia">French Polynesia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="French Southern Ter">French Southern Ter</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Gabon">Gabon</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Gambia">Gambia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Georgia">Georgia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Germany">Germany</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Ghana">Ghana</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Gibraltar">Gibraltar</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Great Britain">Great Britain</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Greece">Greece</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Greenland">Greenland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Grenada">Grenada</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Guadeloupe">Guadeloupe</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Guam">Guam</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Guatemala">Guatemala</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Guinea">Guinea</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Guyana">Guyana</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Haiti">Haiti</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Hawaii">Hawaii</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Honduras">Honduras</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Hong Kong">Hong Kong</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Hungary">Hungary</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Iceland">Iceland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Indonesia">Indonesia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="India">India</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Iran">Iran</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Iraq">Iraq</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Ireland">Ireland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Isle of Man">Isle of Man</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Israel">Israel</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Italy">Italy</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Jamaica">Jamaica</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Japan">Japan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Jordan">Jordan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Kazakhstan">Kazakhstan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Kenya">Kenya</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Kiribati">Kiribati</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Korea North">Korea North</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Korea Sout">Korea South</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Kuwait">Kuwait</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Kyrgyzstan">Kyrgyzstan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Laos">Laos</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Latvia">Latvia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Lebanon">Lebanon</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Lesotho">Lesotho</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Liberia">Liberia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Libya">Libya</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Liechtenstein">Liechtenstein</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Lithuania">Lithuania</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Luxembourg">Luxembourg</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Macau">Macau</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Macedonia">Macedonia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Madagascar">Madagascar</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Malaysia">Malaysia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Malawi">Malawi</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Maldives">Maldives</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mali">Mali</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Malta">Malta</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Marshall Islands">Marshall Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Martinique">Martinique</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mauritania">Mauritania</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mauritius">Mauritius</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mayotte">Mayotte</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mexico">Mexico</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Midway Islands">Midway Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Moldova">Moldova</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Monaco">Monaco</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mongolia">Mongolia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Montserrat">Montserrat</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Morocco">Morocco</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Mozambique">Mozambique</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Myanmar">Myanmar</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Nambia">Nambia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Nauru">Nauru</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Nepal">Nepal</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Netherland Antilles">Netherland Antilles</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Netherlands">Netherlands (Holland, Europe)</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Nevis">Nevis</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="New Caledonia">New Caledonia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="New Zealand">New Zealand</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Nicaragua">Nicaragua</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Niger">Niger</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Nigeria">Nigeria</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Niue">Niue</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Norfolk Island">Norfolk Island</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Norway">Norway</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Oman">Oman</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Pakistan">Pakistan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Palau Island">Palau Island</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Palestine">Palestine</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Panama">Panama</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Papua New Guinea">Papua New Guinea</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Paraguay">Paraguay</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Peru">Peru</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Phillipines">Philippines</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Pitcairn Island">Pitcairn Island</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Poland">Poland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Portugal">Portugal</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Puerto Rico">Puerto Rico</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Qatar">Qatar</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Republic of Montenegro">Republic of Montenegro</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Republic of Serbia">Republic of Serbia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Reunion">Reunion</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Romania">Romania</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Russia">Russia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Rwanda">Rwanda</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Barthelemy">St Barthelemy</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Eustatius">St Eustatius</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Helena">St Helena</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Kitts-Nevis">St Kitts-Nevis</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Lucia">St Lucia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Maarten">St Maarten</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Pierre & Miquelon">St Pierre & Miquelon</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="St Vincent & Grenadines">St Vincent & Grenadines</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Saipan">Saipan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Samoa">Samoa</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Samoa American">Samoa American</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="San Marino">San Marino</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Sao Tome & Principe">Sao Tome & Principe</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Saudi Arabia">Saudi Arabia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Senegal">Senegal</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Seychelles">Seychelles</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Sierra Leone">Sierra Leone</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Singapore">Singapore</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Slovakia">Slovakia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Slovenia">Slovenia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Solomon Islands">Solomon Islands</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Somalia">Somalia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="South Africa">South Africa</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Spain">Spain</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Sri Lanka">Sri Lanka</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Sudan">Sudan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Suriname">Suriname</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Swaziland">Swaziland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Sweden">Sweden</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Switzerland">Switzerland</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Syria">Syria</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tahiti">Tahiti</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Taiwan">Taiwan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tajikistan">Tajikistan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tanzania">Tanzania</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Thailand">Thailand</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Togo">Togo</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tokelau">Tokelau</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tonga">Tonga</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Trinidad & Tobago">Trinidad & Tobago</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tunisia">Tunisia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Turkey">Turkey</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Turkmenistan">Turkmenistan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Turks & Caicos Is">Turks & Caicos Is</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Tuvalu">Tuvalu</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Uganda">Uganda</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="United Kingdom">United Kingdom</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Ukraine">Ukraine</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="United Arab Erimates">United Arab Emirates</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="United States of America">United States of America</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Uraguay">Uruguay</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Uzbekistan">Uzbekistan</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Vanuatu">Vanuatu</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Vatican City State">Vatican City State</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Venezuela">Venezuela</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Vietnam">Vietnam</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Virgin Islands (Brit)">Virgin Islands (Brit)</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Virgin Islands (USA)">Virgin Islands (USA)</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Wake Island">Wake Island</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Wallis & Futana Is">Wallis & Futana Is</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Yemen">Yemen</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Zaire">Zaire</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Zambia">Zambia</a></li>
+                    <li class="dropdown-item px-3"><a href="#" class="text-decoration-none txt-sm d-block w-100" value="Zimbabwe">Zimbabwe</a></li>
+
+                  </ul>
+                </div>  
+                  
+              </div>
+            </div>
+            <!-- street address -->
+            <div class="form-group mb-4"> 
+              <label for="street" class="text-muted txt-smaller text-uppercase letter-sp-sm">street address</label>
+              <input type="text" class="form-control main-box-shadow" id="street">
+            </div>
+            <!-- city & state -->
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-group mr-md-2"> 
+                  <label for="street" class="text-muted txt-smaller text-uppercase letter-sp-sm">city</label>
+                  <input type="text" class="form-control main-box-shadow" id="street">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group ml-md-2"> 
+                  <label for="street" class="text-muted txt-smaller text-uppercase letter-sp-sm">state</label>
+                  <input type="text" class="form-control main-box-shadow" id="street">
+                </div>
+              </div>
+            </div>
+            <!-- zip code -->
+            <div class="row">
+              <div class="form-group col-md-6"> 
+                <label for="street" class="text-muted txt-smaller text-uppercase letter-sp-sm">zip code</label>
+                <input type="text" class="form-control main-box-shadow" id="street">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr/>
+
+    <!-- 4th row next-step btn-->
+    <div class="row my-5 pr-1">
+      <div class="col-auto mx-auto mx-md-0 ml-md-auto">
+        <a class="next main-box-shadow d-flex justify-content-around align-items-center text-white font-weight-bold btn text-uppercase font-weight-bold main-bg-border letter-sp txt-smaller px-3 py-2" href="user-add-2.html">
+          next step
+          <i class="fas fa-angle-right ml-2" style="font-size: 1.1rem"></i>
+        </a>
+      </div>
+    </div>        
+  </div>
+</div>
+
+<!----------------------------------- footer section  --------------------------------->
+<footer>
+  <!-- main block , menus , subscribe form -->
+  <div class="main-block py-5 main-bg">
+    <div class="container pb-5">
+      <div class="row pb-5">
+        <!-- 1st col-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-3">directory</h6>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <p>
+            <a href="#twitter"><i class="fab fa-twitter pr-2 main-color-selector"></i></a>
+            <a href="#facebook"><i class="fab fa-facebook-square pr-2 main-color-selector"></i></a>
+            <a href="#instagram"><i class="fab fa-instagram pr-2 main-color-selector"></i></a>
+            <a href="#pintrest"><i class="fab fa-pinterest pr-2 main-color-selector"></i></a>
+            <a href="#vimeo"><i class="fab fa-vimeo pr-2 main-color-selector"></i></a>
+          </p>
+        </div>
+        <!-- 2nd col-->
+        <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-3">directory</h6>
+          <ul class="list-unstyled ">
+            <li><a href="#" class="text-muted text-capitalize">rooms</a></li>
+            <li><a href="#" class="text-muted text-capitalize">map on top</a></li>
+            <li><a href="#" class="text-muted text-capitalize">side map</a></li>
+            <li><a href="#" class="text-muted text-capitalize">no map</a></li>
+            <li><a href="#" class="text-muted text-capitalize">room detail</a></li>
+          </ul>
+        </div>
+        <!-- 3rd col-->
+        <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-3">pages</h6>
+          <ul class="list-unstyled ">
+            <li><a href="#" class="text-muted text-capitalize">comparison</a></li>
+            <li><a href="#" class="text-muted text-capitalize">team</a></li>
+            <li><a href="#" class="text-muted text-capitalize">contact</a></li>
+            <li><a href="#" class="text-muted text-capitalize">pricing</a></li>
+            <li><a href="#" class="text-muted text-capitalize">text page</a></li>
+            <li><a href="#" class="text-muted text-uppercase">f.a.q.s</a></li>
+            <li><a href="#" class="text-muted ">Coming soon</a></li>
+          </ul>
+        </div>
+        <!-- 4th col-->
+        <div class="col-lg-4">
+          <h6 class="text-uppercase font-weight-bold mb-3">daily Offers & discounts</h6>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+          <div class="input-group">
+            <input 
+              type="email" 
+              class=" main-box-shadow form-control bg-transparent border-dark border-right-0" 
+              placeholder="Your Email Address" 
+              aria-label="Your Email Address" 
+              aria-describedby="button-addon">
+            <div class="input-group-append">
+              <button class="btn btn-outline-dark border-left-0" type="submit" id="button-addon">
+                <i class="fas fa-location-arrow"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright section -->
+  <div class='copyright bg-dark py-4'>
+    <div class="container">
+      <div class="row py-1 text-center text-md-left">
+        <!-- 1st col-->
+        <div class="col-md-6">
+          <p class="mb-4 m-md-0 txt-sm">&copy; 2019 Your company. All rights reserved.</p>
+        </div>
+        <!-- 2nd col-->
+        <div class="col-md-6 d-md-flex align-items-center justify-content-end">
+          <p class="m-0">
+            <i class="fab fa-cc-visa mr-2"></i>
+            <i class="fab fa-cc-mastercard mr-2"></i>
+            <i class="fab fa-cc-paypal mr-2"></i>
+            <i class="fab fa-cc-amex "></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-----------------  js for bootstrap 4 ---------------->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./js/index.js"></script>
+<script>
+  // for convert dropdown menu into select box in bootstrap   
+$(".dropdown-menu li a").click(function(e){
+  e.preventDefault()
+  var selText = $(this).text();
+  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+});
+</script>
+</body>
+
+</html>

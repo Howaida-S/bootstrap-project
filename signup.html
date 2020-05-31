@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--responsive meta tag-->
+  <!-- swipper cdn-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"/> <!--bootstrap css -->
+  <link rel="stylesheet" href="./css/sign.css"/><!-- sign.css-->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins&display=swap" rel="stylesheet"> <!--google fonts -->
+  <title>Director Theme By Bootstrap</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><!--font awesome -->  
+</head>
+<body>
+  <div class="container-fluid px-3">
+    <div class="row sub-container">
+      <!-- the login form-->
+      <div class=" col-md-8 col-lg-6 col-xl-5">
+        <div class="login-container px-0 py-5 p-md-5">
+          <div class="logo d-flex justify-content-between align-items-center px-xl-5 mb-3">
+            <img src="./images/logo.svg" alt="logo" width="64px" height="64px"/>
+            <a href="index.html" role="button">
+              <i class="fas fa-times main-color darker-main-color"></i>
+            </a>
+          </div>
+          <div class="px-xl-5 mb-4">
+            <h2 class="font-weight-bold">Sign up</h2>
+            <p class="text-muted">His room, a proper human room although a little too small, lay peacefully between its four familiar walls. A collection of textile samples lay spread out on the table.</p>
+          </div>
+          <form class="px-xl-5">
+            <!-- email-->
+            <div class="form-group mb-4">
+              <label for="formGroupExampleInput" class="text-muted text-uppercase txt-sm">email address</label>
+              <input type="email" class="form-control main-box-shadow" id="formGroupExampleInput" placeholder="name@address.com" required>
+            </div>
+            <!--password-->
+            <div class="form-group mb-4">
+              <label for="formGroupExampleInput1" class="text-muted text-uppercase txt-sm">password</label>
+              <input type="password" class="form-control main-box-shadow" id="formGroupExampleInput1" placeholder="password" required>
+            </div>
+            <!--password-->
+            <div class="form-group mb-4">
+              <label for="formGroupExampleInput2" class="text-muted text-uppercase txt-sm">confirm your password</label>
+              <input type="password" class="form-control main-box-shadow" id="formGroupExampleInput2" placeholder="password" required>
+            </div>
+            <!-- signin btn-->
+            <button class="btn sign-in main-box-shadow btn-block main-bg-border btn-selector text-white font-weight-bold letter-sp text-uppercase">Sign up</button>
+            <!-- hr-->
+            <div class="form-row mt-4 mb-3 px-1">
+              <div class="col-5">
+              </div>
+              <div class="col-2 px-0 text-center text-muted text-uppercase txt-sm letter-sp">or</div>
+              <div class="col-5">
+              </div>
+            </div>
+            <!-- facebook -->
+            <button class="btn btn-lg btn-block main-box-shadow d-flex justify-content-between align-items-center mb-4 main-border-color">
+              <i class="fab fa-facebook-f"></i>
+              <p class="px-5 mb-0 letter-sp txt-sm text-uppercase font-weight-bold">connect with facebook</p>
+            </button>
+            <!-- google -->
+            <button class="btn btn-lg btn-outline-secondary btn-block d-flex align-items-center mb-4">
+              <i class="fab fa-google pr-3"></i>
+              <p class="mb-0 letter-sp txt-sm text-uppercase font-weight-bold">connect with google</p>
+            </button>
+            <!-- hr-->
+            <hr/>
+            <!-- privacy policy -->
+            <p class="txt-sm text-muted mb-0">By signing up you agree to Directory's</p>
+            <p> 
+              <a class="main-color darker-main-color txt-sm text-capitalize" href="#">terms and conditions</a>
+              <span class="txt-sm text-muted">and</span>
+              <a class="main-color darker-main-color txt-sm text-capitalize" href="#">privacy policy.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- the image appear only in lg & xl screens -->
+      <div class="col-md-4 col-lg-6 col-xl-7 d-none d-md-block ">
+        <div class ="img-container"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

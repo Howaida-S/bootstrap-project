@@ -1,0 +1,134 @@
+/*-------------- carousel ------------*/
+/* change the height and still keep it full width in 2 steps :
+1- change the height of carousel item 
+2- change the height of img too & object-fit: cover to preserve the aspect */
+.carousel-item{height: 600px} 
+.carousel-item img{height: 600px; object-fit: cover}
+.carousel-item:after { /* dark overlay */
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.3);
+}
+.carousel-caption{ bottom: 30%; right: 10%; left: 10%}
+.carousel-caption p{ 
+  font-size: 1rem; 
+  text-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.1);
+  letter-spacing: 0.375rem 
+}
+.carousel-caption h1{ text-shadow: 0.125rem 0.125rem 0.125rem rgba(0,0,0,0.1); font-size: 4.5rem}
+.carousel-caption form{ box-shadow: 0 0 1rem rgba(0,0,0,0.15)}
+.carousel-caption .form-control:focus{box-shadow: none}
+/* styling custom select home type & country dropdown */
+.carousel-caption .my-select:active{ color:#212529}
+.carousel-caption a.dropdown-toggle:hover{background-color: #ced4da; color: #999}
+.carousel-caption a, a:hover{color: initial}
+.carousel-caption .selected, .selected:hover, .dropdown-item:active {background-color: #4E66F8}
+.carousel-caption .selected a{color: #fff}
+.carousel-caption .selected:hover , .selected:active a, .dropdown-item:active {color: initial}
+/* styling search btn */
+.carousel-caption button.search,
+.carousel-caption .dropdown-item:active{ font-size: small; line-height: 1.7; color: #fff}
+
+
+/* carousel form media query */
+@media screen and (max-width: 991.98px){
+  .carousel-caption h1{font-size: 2.5rem}
+  .carousel-caption form{border-radius: 1rem; padding: 1rem}
+  .carousel-caption form input{
+    margin-bottom: 1rem;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    font-size: 0.85rem;
+  }
+  .carousel-caption form .input-group-text{ border-top: 0; border-right: 0; border-left: 0}
+  .carousel-caption form .dropdown-toggle{ font-size: 0.85rem; margin-top: 1rem}
+  .carousel-caption form .dropdown-toggle .dropdown-item{ font-size: 0.85rem}
+  .carousel-caption .form-control:focus{border-color: #ced4da}
+  .carousel-caption button.search{width: 100%; margin-top: 1rem}
+}
+@media screen and (min-width:992px){
+  .carousel-caption form{border-radius: 50rem; padding: 2rem;}
+  .carousel-caption form input{border: 0}
+  .carousel-caption form .input-group-text{border: 0}
+}
+
+/*--------------------------------------------- Booking section -------------------------------*/
+.booking .icon{
+  background-color:#eaedfe; width: 60px; height: 60px}
+.booking p.text-muted{padding: 0 1.5rem}
+
+/*--------------------------------------------- guide section -------------------------------*/
+.guide .card .card-img-overlay {
+  opacity: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 78%, rgba(0,0,0,0.65) 100%);
+}
+.guide .card .card-img-overlay .content{position: absolute; bottom: 0}
+
+/*--------------------------------------------- deals section -------------------------------*/
+.deals .card-img-overlay{background-color: rgba(0, 0, 0, 0.2)}
+.deals .card-img-overlay .icon{
+  z-index: 25;
+  width: 40px;
+  height: 40px;
+  background: #343a40;
+  opacity: 0.5;
+  transition: all 0.12 ease-in-out;
+}
+.deals .card-img-overlay .icon:hover{opacity: 0.7} 
+.deals .card-img-overlay .info{position: absolute; bottom: 1rem}
+.deals .card-img-overlay .info img{border: 2px solid #fff}
+/* these 2 steps used to remove the Space Between Inline Block Elements here which is i by putting 
+the font-size of parent => 0 & and assign font-size for i  */
+.deals .card-body .icons-container{font-size: 0}
+.deals .card-body .icons-container i{font-size: 0.7rem}
+.deals .card-body .icons-container i.grey{color: #dee2e6}
+/* rounded card */
+.deals .card, .deals .my-card{border-radius: 0.4rem}
+.deals .card-img-top, .deals .card-img-overlay{border-radius: 0.4rem 0.4rem 0 0}
+@media screen and (min-width: 768px) and (max-width: 1199.99px){/* from xs to lg screen */
+  .deals .my-card{height: 384px}/* to have same height on different screens*/
+}
+
+/*------------------------------------------- blog section -------------------------------*/
+@media screen and (max-width: 1199.99px){/* in md & lg screen */
+  .blog .my-card{height: 509px}/* to have same height on different screens*/
+}
+/*--------------------------------------------- next hoilday section -------------------------------*/
+.holiday .img-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 25;
+}
+/* to center container horizontally & vertically */
+.holiday .container{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)}
+.holiday .container h3{font-family: 'Playfair Display', serif}
+
+@media screen and (min-width: 768px){.holiday .container h3{font-size: 4.5rem}}
+
+/*--------------------------------------- testimonials section -------------------------------*/
+.testimonials .avatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+@media screen and (min-width: 1200px ){.testimonials .avatar {top: 50%; left: 0} }
+.testimonials p.card-text {line-height: 1.7}
+
+/*--------------------------------------- gallery section -------------------------------*/
+.gallery img{transition: all 0.2s ease-in-out}
+.gallery img:hover{transform: scale(1.1, 1.1)}

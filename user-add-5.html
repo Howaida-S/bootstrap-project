@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--responsive meta tag-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"/> <!--bootstrap css -->
+  <link rel="stylesheet" href="./css/navbar-footer.css"/><!-- nav-footer.css-->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins&display=swap" rel="stylesheet"> <!--google fonts -->
+  <title>Director Theme By Bootstrap</title>
+  <link rel='icon' type='image/png' href='/images/imgname.png'/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><!--font awesome -->  
+</head>
+<body>
+
+<!-------------------------------------Navbar ---------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top container-fluid shadow">
+  <div class="d-flex align-items-center"> 
+    <a class="navbar-brand text-uppercase font-weight-bold" href="index.html"><!-- brand name & icon -->
+      <img src="./images/asset 0.svg"/>
+    </a>
+    <form class="form-inline d-none d-sm-flex rounded main-bg"> <!-- search bar-->
+      <div class="input-group main-bg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-sm-2 border-0 shadow-0 outline-0" type="search" placeholder="Search" aria-label="Search">
+      </div>  
+    </form>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><!-- toggle button appear in xs, sm,md screens-->
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- appear on click on toggle btn-->
+    <form class="form-inline d-sm-none d-flex mt-3 mb-3"> <!-- search bar on extra small screens-->
+      <div class="input-group main-bg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-sm-2 border-0 shadow-0 outline-0" type="search" placeholder="Search" aria-label="Search">
+      </div>  
+  </form>
+    <ul class="navbar-nav ml-auto"> <!-- items-->
+      <!--------------Home dropdown--------------->
+      <li class="nav-item dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle " href="#" id="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          home <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu hm" aria-labelledby="home">
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">rooms</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">restaurants</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">travel</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">real estate<span class="badge ml-2 rounded-pill">new</span></a>
+        </div>
+      </li>
+      <!--------------- template dropdown ------------->
+      <li class="nav-item dropdown tempLi">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" id="temp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          template <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu template mt-0" aria-labelledby="temp">
+          <div class="row">
+            <!--------- the content ----------->
+            <div class="col-lg-9 p-3">
+              <div class="contaioner-fluid">
+                  <!--first row-->
+                <div class="row p-3 pl-lg-5 pt-lg-5 pr-lg-0 pb-lg-5">
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">homepage</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">rooms</a></li>
+                      <li><a class = "text-capitalize" href="#">restaurants</a></li>
+                      <li><a class = "text-capitalize" href="#">travel</a></li>
+                      <li><a class = "text-capitalize" href="#">real estate<span class="badge ml-2 rounded-pill ">new</span></a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">restaurants</h6>
+                    <ul class="megamenu-list list-unstyled mb-4">
+                      <li><a href="#">Category - Map on the top</a></li>
+                      <li><a href="#">Category - Map on the right   </a></li>
+                      <li><a href="#">Category - no map   </a></li>
+                      <li><a href="#">Restaurant detail</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">rooms</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">Category - Map on the top</a></li>
+                      <li><a class = "text-capitalize" href="#">Category - Map on the right</a></li>
+                      <li><a class = "text-capitalize" href="#">Category - no map</a></li>
+                      <li><a class = "text-capitalize" href="#">Room detail</a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">blog</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">blog</a></li>
+                      <li><a class = "text-capitalize" href="#">post</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">pages</h6>
+                    <ul class="megamenu-list list-unstyled mb-4">
+                      <li><a class = "text-capitalize" href="#">Comparison<span class="badge ml-2 rounded-pill">new</span></a></li>
+                      <li><a class = "text-capitalize" href="#">Team <span class="badge ml-2 rounded-pill">new</span></a></li>
+                      <li><a class = "text-capitalize" href="#">Contact</a></li>
+                      <li><a class = "text-capitalize" href="#">Pricing</a></li>
+                      <li><a class = "text-capitalize" href="#">Text page</a></li>
+                      <li><a class = "text-capitalize" href="#">F.A.Q.s </a></li>
+                      <li><a class = "text-capitalize" href="#">Coming soon</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">user</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#" >Sign in</a></li>
+                      <li><a class = "text-capitalize" href="#">Sign up</a></li>
+                      <li><a class = "text-capitalize" href="#">Booking process - 4 pages</a></li>
+                      <li><a class = "text-capitalize" href="#">Bookings — grid view</a></li>
+                      <li><a class = "text-capitalize" href="#">Booking detail</a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">host</h6>
+                    <ul class="mb-4">
+                      <li><a href="#">Add new listing - 6 pages</a></li>
+                      <li><a href="#">Bookings — list view</a></li>
+                    </ul>
+                  </div>
+                </div>
+                  <!--second row-->
+                <div class="row pl-lg-5 pr-lg-0 pb-lg-5"> 
+                  <div class="col-lg-3">
+                    <div class="d-flex ">
+                      <i class="fas fa-map m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>best rentals</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">find the perfect place</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="fas fa-medal m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>earn points</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">and get great rewards</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="fas fa-headset m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>020-800-456-747</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">24/7 Available Support</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="far fa-credit-card m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>Secure Payment</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">Secure Payment</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                </div>
+              </div>  
+              </div>  
+            </div>
+          
+            <!----------the image -------------->  
+            <div class=" d-none d-lg-flex col-lg-3">
+              <img src="./images/asset 1.jpeg" width="100%" height="100%"/>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!--------------- contact --------------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" href="contact.html">contact</a>
+      </li>
+      <!----------------docs dropdown -------------->
+      <li class="nav-item dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" id="docs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          docs
+        </a>
+        <div class="dropdown-menu dropdown-menu-right docs" aria-labelledby="docs">
+          <h6 class="dropdown-header text-uppercase letter-sp">documentaion</h6>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">introduction</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">directory structure</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">gulp</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">customizing css</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">credits</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">changelog</a>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header text-uppercase letter-sp">components</h6>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">bootstrap</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">theme</a>
+        </div>
+      </li>
+      <!---------------sign in ------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" href="login.html">sign in</a>
+      </li>
+      <!---------------sign up ------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold " href="signup.html">sign up</a>
+      </li>
+      <!---------------profile img dropdown  ---------------------->
+      <li class="nav-item dropdown ml-lg-3">
+        <a class="d-inline-block" width="40px" height="40px" href="#" id="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="./images/asset 39.jpg" alt="profile img" width="40px" height="40px" class="rounded-circle shadow" style="border: 2px solid #fff"/>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right img" aria-labelledby="home">
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">Booking process - 4 pages</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">Bookings - grid view</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">Booking - detail</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-capitalize main-color-selector main-bg-border-selector" href="login.html">
+            <i class="fas fa-sign-in-alt text-muted mr-2"></i>
+            Sign out
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <div class="progress rounded-0 fixed-top" style="height: 0.5rem; top: 74.02px;z-index: 1000;">
+    <div class="progress-bar main-bg-color" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemax="100"></div>
+  </div>
+<!-------------------------------------step-4 section  ------------------------------->
+<div class="step-4 mt-2 py-5">
+  <div class="container">
+    <!-- 1st row heading-->
+    <div class="row mb-4">
+      <div class="col-12 text-center mb-4">
+        <p class="text-uppercase letter-sp font-weight-bold main-color mb-1">add new listing</p>
+        <h2 class="font-weight-bold">Listing uploaded</h2>
+      </div>
+      <div class="col-12 text-center mb-4">
+        <img src="./images/celebration.svg" class="img-fluid" alt="clebration-img" width="400px"/>
+      </div>
+      <p class="col-12 text-muted text-center">Thank you, Ondrej. Your listing has been saved and will be reviewed shortly.</p>
+    </div>
+
+    <!-- 2nd row btn -->
+    <div class="row my-5">
+      <!-- main btn -->
+      <div class="col-md-6 d-flex justify-content-center justify-content-md-end mb-3 mb-md-0">
+        <a class="next main-box-shadow text-white btn text-uppercase font-weight-bold main-bg-border letter-sp txt-smaller px-3 py-2" href="#">do something</a>
+      </div>
+      <!-- secondary btn -->
+      <div class="col-md-6 d-flex justify-content-center justify-content-md-start">
+        <a class="btn btn-outline-secondary text-uppercase font-weight-bold letter-sp txt-smaller px-3 py-2" href="#">or something else</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!----------------------------------- footer section  -------------------------->
+<footer>
+  <!-- main block , menus , subscribe form -->
+  <div class="main-block py-5 main-bg">
+    <div class="container pb-5">
+      <div class="row pb-5">
+        <!-- 1st col-->
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-3">directory</h6>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <p>
+            <a href="#twitter"><i class="fab fa-twitter pr-2 main-color-selector"></i></a>
+            <a href="#facebook"><i class="fab fa-facebook-square pr-2 main-color-selector"></i></a>
+            <a href="#instagram"><i class="fab fa-instagram pr-2 main-color-selector"></i></a>
+            <a href="#pintrest"><i class="fab fa-pinterest pr-2 main-color-selector"></i></a>
+            <a href="#vimeo"><i class="fab fa-vimeo pr-2 main-color-selector"></i></a>
+          </p>
+        </div>
+        <!-- 2nd col-->
+        <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-3">directory</h6>
+          <ul class="list-unstyled ">
+            <li><a href="#" class="text-muted text-capitalize">rooms</a></li>
+            <li><a href="#" class="text-muted text-capitalize">map on top</a></li>
+            <li><a href="#" class="text-muted text-capitalize">side map</a></li>
+            <li><a href="#" class="text-muted text-capitalize">no map</a></li>
+            <li><a href="#" class="text-muted text-capitalize">room detail</a></li>
+          </ul>
+        </div>
+        <!-- 3rd col-->
+        <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-3">pages</h6>
+          <ul class="list-unstyled ">
+            <li><a href="#" class="text-muted text-capitalize">comparison</a></li>
+            <li><a href="#" class="text-muted text-capitalize">team</a></li>
+            <li><a href="#" class="text-muted text-capitalize">contact</a></li>
+            <li><a href="#" class="text-muted text-capitalize">pricing</a></li>
+            <li><a href="#" class="text-muted text-capitalize">text page</a></li>
+            <li><a href="#" class="text-muted text-uppercase">f.a.q.s</a></li>
+            <li><a href="#" class="text-muted ">Coming soon</a></li>
+          </ul>
+        </div>
+        <!-- 4th col-->
+        <div class="col-lg-4">
+          <h6 class="text-uppercase font-weight-bold mb-3">daily Offers & discounts</h6>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+          <div class="input-group">
+            <input 
+              type="email" 
+              class="main-box-shadow form-control bg-transparent border-dark border-right-0" 
+              placeholder="Your Email Address" 
+              aria-label="Your Email Address" 
+              aria-describedby="button-addon">
+            <div class="input-group-append">
+              <button class="btn btn-outline-dark border-left-0" type="submit" id="button-addon">
+                <i class="fas fa-location-arrow"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright section -->
+  <div class='copyright bg-dark py-4'>
+    <div class="container">
+      <div class="row py-1 text-center text-md-left">
+        <!-- 1st col-->
+        <div class="col-md-6">
+          <p class="mb-4 m-md-0 txt-sm">&copy; 2019 Your company. All rights reserved.</p>
+        </div>
+        <!-- 2nd col-->
+        <div class="col-md-6 d-md-flex align-items-center justify-content-end">
+          <p class="m-0">
+            <i class="fab fa-cc-visa mr-2"></i>
+            <i class="fab fa-cc-mastercard mr-2"></i>
+            <i class="fab fa-cc-paypal mr-2"></i>
+            <i class="fab fa-cc-amex "></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-----------------  js for bootstrap 4 ---------------->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>

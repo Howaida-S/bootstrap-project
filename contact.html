@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--responsive meta tag-->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"/> <!--bootstrap css -->
+  <link rel="stylesheet" href="./css/navbar-footer.css"/><!-- nav-footer css -->
+  <link rel="stylesheet" href="./css/contact.css"/><!-- contact page style -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins&display=swap" rel="stylesheet"> <!--google fonts -->
+  <title>Director Theme By Bootstrap</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"><!--font awesome -->  
+  <!-- for maps-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+</head>
+</head>
+<body>
+
+<!-------------------------------------Navbar ---------------------------------------->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top container-fluid shadow">
+  <div class="d-flex align-items-center"> 
+    <a class="navbar-brand text-uppercase font-weight-bold" href="index.html"><!-- brand name & icon -->
+      <img src="./images/asset 0.svg"/>
+    </a>
+    <form class="form-inline d-none d-sm-flex rounded main-bg"> <!-- search bar-->
+      <div class="input-group main-bg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-sm-2 border-0 shadow-0 outline-0" type="search" placeholder="Search" aria-label="Search">
+      </div>  
+    </form>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><!-- toggle button appear in xs, sm,md screens-->
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- appear on click on toggle btn-->
+    <form class="form-inline d-sm-none d-flex mt-3 mb-3"> <!-- search bar on extra small screens-->
+      <div class="input-group main-bg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input class="form-control mr-sm-2 border-0 shadow-0 outline-0" type="search" placeholder="Search" aria-label="Search">
+      </div>  
+  </form>
+    <ul class="navbar-nav ml-auto"> <!-- items-->
+      <!--------------Home dropdown--------------->
+      <li class="nav-item dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle " href="#" id="home" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          home <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu hm" aria-labelledby="home">
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">rooms</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">restaurants</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">travel</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">real estate<span class="badge ml-2 rounded-pill">new</span></a>
+        </div>
+      </li>
+      <!--------------- template dropdown ------------->
+      <li class="nav-item dropdown tempLi">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" id="temp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          template <span class="sr-only">(current)</span>
+        </a>
+        <div class="dropdown-menu template mt-0" aria-labelledby="temp">
+          <div class="row">
+            <!--------- the content ----------->
+            <div class="col-lg-9 p-3">
+              <div class="contaioner-fluid">
+                  <!--first row-->
+                <div class="row p-3 pl-lg-5 pt-lg-5 pr-lg-0 pb-lg-5">
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">homepage</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">rooms</a></li>
+                      <li><a class = "text-capitalize" href="#">restaurants</a></li>
+                      <li><a class = "text-capitalize" href="#">travel</a></li>
+                      <li><a class = "text-capitalize" href="#">real estate<span class="badge ml-2 rounded-pill ">new</span></a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">restaurants</h6>
+                    <ul class="megamenu-list list-unstyled mb-4">
+                      <li><a href="#">Category - Map on the top</a></li>
+                      <li><a href="#">Category - Map on the right   </a></li>
+                      <li><a href="#">Category - no map   </a></li>
+                      <li><a href="#">Restaurant detail</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">rooms</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">Category - Map on the top</a></li>
+                      <li><a class = "text-capitalize" href="#">Category - Map on the right</a></li>
+                      <li><a class = "text-capitalize" href="#">Category - no map</a></li>
+                      <li><a class = "text-capitalize" href="#">Room detail</a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">blog</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#">blog</a></li>
+                      <li><a class = "text-capitalize" href="#">post</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">pages</h6>
+                    <ul class="megamenu-list list-unstyled mb-4">
+                      <li><a class = "text-capitalize" href="#">Comparison<span class="badge ml-2 rounded-pill">new</span></a></li>
+                      <li><a class = "text-capitalize" href="#">Team <span class="badge ml-2 rounded-pill">new</span></a></li>
+                      <li><a class = "text-capitalize" href="#">Contact</a></li>
+                      <li><a class = "text-capitalize" href="#">Pricing</a></li>
+                      <li><a class = "text-capitalize" href="#">Text page</a></li>
+                      <li><a class = "text-capitalize" href="#">F.A.Q.s </a></li>
+                      <li><a class = "text-capitalize" href="#">Coming soon</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-3">
+                    <h6 class="text-uppercase font-weight-bold">user</h6>
+                    <ul class="mb-4">
+                      <li><a class = "text-capitalize" href="#" >Sign in</a></li>
+                      <li><a class = "text-capitalize" href="#">Sign up</a></li>
+                      <li><a class = "text-capitalize" href="#">Booking process - 4 pages</a></li>
+                      <li><a class = "text-capitalize" href="#">Bookings — grid view</a></li>
+                      <li><a class = "text-capitalize" href="#">Booking detail</a></li>
+                    </ul>
+                    <h6 class="text-uppercase font-weight-bold">host</h6>
+                    <ul class="mb-4">
+                      <li><a href="#">Add new listing - 6 pages</a></li>
+                      <li><a href="#">Bookings — list view</a></li>
+                    </ul>
+                  </div>
+                </div>
+                  <!--second row-->
+                <div class="row pl-lg-5 pr-lg-0 pb-lg-5"> 
+                  <div class="col-lg-3">
+                    <div class="d-flex ">
+                      <i class="fas fa-map m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>best rentals</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">find the perfect place</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="fas fa-medal m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>earn points</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">and get great rewards</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="fas fa-headset m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>020-800-456-747</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">24/7 Available Support</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex">
+                      <i class="far fa-credit-card m-3" style="font-size: x-large;"></i>
+                      <div>
+                        <h6>Secure Payment</h6>
+                        <ul>
+                          <li><a class = "text-capitalize" href="#">Secure Payment</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                </div>
+              </div>  
+              </div>  
+            </div>
+          
+            <!----------the image -------------->  
+            <div class=" d-none d-lg-flex col-lg-3">
+              <img src="./images/asset 1.jpeg" width="100%" height="100%"/>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!--------------- contact --------------------->
+      <li class="nav-item active">
+        <a class="nav-link font-weight-bold" href="contact.html">contact</a>
+      </li>
+      <!----------------docs dropdown -------------->
+      <li class="nav-item dropdown">
+        <a class="nav-link font-weight-bold dropdown-toggle" href="#" id="docs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          docs
+        </a>
+        <div class="dropdown-menu dropdown-menu-right docs" aria-labelledby="docs">
+          <h6 class="dropdown-header text-uppercase letter-sp">documentaion</h6>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">introduction</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">directory structure</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">gulp</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">customizing css</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">credits</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">changelog</a>
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header text-uppercase letter-sp">components</h6>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">bootstrap</a>
+          <a class="dropdown-item text-capitalize main-color-selector" href="#">theme</a>
+        </div>
+      </li>
+      <!---------------sign in ------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" href="login.html">sign in</a>
+      </li>
+      <!---------------sign up ------------->
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold " href="signup.html">sign up</a>
+      </li>
+      <!---------------button -------------->
+      <li class="nav-item ml-0 ml-lg-3 mt-3 mt-lg-0 d-lg-none d-xl-inline-block">
+        <a class="btn-darker nav-link main-box-shadow font-weight-bold btn text-uppercase font-weight-bold add main-bg-border letter-sp text-white" href="user-add-0.html">add a listing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!---------------------------------------- header img ------------------------>
+  <div class="main position-relative">
+    <div class="img-overlay d-flex flex-column justify-content-center align-items-center">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb  bg-transparent mb-1">
+          <li class="breadcrumb-item">
+            <a href="index.html" class="text-white text-capitalize">home</a>
+          </li>
+          <li 
+            class="breadcrumb-item active text-white text-capitalize " 
+            aria-current="page">contact</li>
+        </ol>
+      </nav>
+      <h1 class="text-white font-weight-bolder text-center">How can we help you today?</h1>
+    </div>
+    <img src="./images/asset 38.jpg" alt="How can we help you today?"/>
+  </div>
+
+<!-------------------------------- info section ------------------------------->
+  <section class="info py-5">
+    <div class="container">
+      <div class="row py-5" >
+        <!-- 1st col-->
+        <div class="col-md-4 mb-3 mb-lg-0 text-center text-md-left">
+          <div class="icon mb-3 d-flex justify-content-center align-items-center rounded-circle mx-auto ml-md-0">
+            <i class="fas fa-map-marker-alt main-color" style="font-size: x-large"></i>
+          </div>
+          <div>
+            <h5 class="font-weight-bold text-capitalize">address</h5>
+            <ul class="p-0 list-unstyled text-muted">
+              <li class="text-capitalize">13/25 new avenue</li>
+              <li class="text-capitalize">new heaven, 45Y 73J</li>
+              <li class="text-capitalize">england,<strong>great britain</strong></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 2nd col-->
+        <div class="col-md-4 mb-3 mb-lg-0 text-center text-md-left">
+          <div class="icon mb-3 d-flex justify-content-center align-items-center rounded-circle mx-auto ml-md-0">
+            <i class="fas fa-phone main-color" style="font-size: x-large"></i>
+          </div>
+          <div>
+            <h5 class="font-weight-bold text-capitalize">call center</h5>
+            <p class ="text-muted">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul class="p-0 list-unstyled text-muted">
+              <li class="text-capitalize"><strong>+33 555 444 333</strong></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 3rd-->
+        <div class="col-md-4 text-center text-md-left">
+          <div class="icon mb-3 d-flex justify-content-center align-items-center rounded-circle mx-auto ml-md-0">
+            <i class="far fa-envelope main-color" style="font-size: x-large"></i>
+          </div>
+          <div>
+            <h5 class="font-weight-bold text-capitalize">electronic support</h5>
+            <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+            <ul class="p-0 list-unstyled text-muted">
+              <li class="text-capitalize">info@sell.com</li>
+              <li class="text-capitalize">support@sell.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+
+<!-------------------------------- Contact form section ----------------------->
+<div class="contact-form py-5 bg-light">
+  <div class="container py-5">
+    <h4 class="font-weight-bolder mb-5">contact form</h4>
+    <div class="row">
+      <!-- form -->
+      <form class="col-md-7 mb-5 mb-md-0">
+        <div class="form-row pb-2">
+          <div class="form-group col-md-6 pr-md-3">
+            <label for="inputFirstName" class="text-uppercase text-muted txt-sm">your firstname *</label>
+            <input type="text" class="form-control main-box-shadow" id="inputFirstName" placeholder="Enter your firstname" required/>
+          </div>
+          <div class="form-group col-md-6 pl-md-3">
+            <label for="inputLastName" class="text-uppercase text-muted txt-sm">your lastname *</label>
+            <input type="text" class="form-control main-box-shadow" id="inputLastName" placeholder="Enter your lastname" required/>
+          </div>
+        </div>
+        <div class="form-group pb-2">
+          <label for="inputEmail4" class="text-uppercase text-muted txt-sm">your email *</label>
+          <input type="email" class="form-control main-box-shadow" id="inputEmail4" placeholder="Enter your email" required/>
+        </div>
+        <div class="form-group pb-2">
+          <label for="exampleFormControlTextarea" class="text-uppercase text-muted txt-sm">your message for us *</label>
+          <textarea class="form-control main-box-shadow" id="exampleFormControlTextarea" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
+        <input 
+          class="font-weight-bold btn text-uppercase font-weight-bold main-border-color letter-sp txt-sm main-box-shadow" 
+          type="submit" value="send message"/>
+      </form>
+      <!-- paragraph -->
+      <div class="col-md-5 pl-md-5 text-muted">
+        <p>Effects present letters inquiry no an removed or friends. Desire behind latter me though in. Supposing shameless am he engrossed up additions. My possible peculiar together to. Desire so better am cannot he up before points. Remember mistaken opinions it pleasure of debating. Court front maids forty if aware their at. Chicken use are pressed removed.</p>
+        <p>Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green.</p>
+        <p>
+          <a href="#twitter"><i class="fab fa-twitter pr-2 main-color"></i></a>
+          <a href="#facebook"><i class="fab fa-facebook-square pr-2 main-color"></i></a>
+          <a href="#instagram"><i class="fab fa-instagram pr-2 main-color"></i></a>
+          <a href="#pintrest"><i class="fab fa-pinterest pr-2 main-color"></i></a>
+          <a href="#vimeo"><i class="fab fa-vimeo pr-2 main-color"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-------------------------------- google map section ------------------------->
+<div id="mapid"></div>
+<!----------------------------------- footer section  -------------------------->
+  <footer>
+    <!-- main block , menus , subscribe form -->
+    <div class="main-block py-5 main-bg">
+      <div class="container pb-5">
+        <div class="row pb-5">
+          <!-- 1st col-->
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-3">directory</h6>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <p>
+              <a href="#twitter"><i class="fab fa-twitter pr-2 main-color-selector"></i></a>
+              <a href="#facebook"><i class="fab fa-facebook-square pr-2 main-color-selector"></i></a>
+              <a href="#instagram"><i class="fab fa-instagram pr-2 main-color-selector"></i></a>
+              <a href="#pintrest"><i class="fab fa-pinterest pr-2 main-color-selector"></i></a>
+              <a href="#vimeo"><i class="fab fa-vimeo pr-2 main-color-selector"></i></a>
+            </p>
+          </div>
+          <!-- 2nd col-->
+          <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-3">directory</h6>
+            <ul class="list-unstyled ">
+              <li><a href="#" class="text-muted text-capitalize">rooms</a></li>
+              <li><a href="#" class="text-muted text-capitalize">map on top</a></li>
+              <li><a href="#" class="text-muted text-capitalize">side map</a></li>
+              <li><a href="#" class="text-muted text-capitalize">no map</a></li>
+              <li><a href="#" class="text-muted text-capitalize">room detail</a></li>
+            </ul>
+          </div>
+          <!-- 3rd col-->
+          <div class="col-md-6 col-lg-2 mb-5 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-3">pages</h6>
+            <ul class="list-unstyled ">
+              <li><a href="#" class="text-muted text-capitalize">comparison</a></li>
+              <li><a href="#" class="text-muted text-capitalize">team</a></li>
+              <li><a href="#" class="text-muted text-capitalize">contact</a></li>
+              <li><a href="#" class="text-muted text-capitalize">pricing</a></li>
+              <li><a href="#" class="text-muted text-capitalize">text page</a></li>
+              <li><a href="#" class="text-muted text-uppercase">f.a.q.s</a></li>
+              <li><a href="#" class="text-muted ">Coming soon</a></li>
+            </ul>
+          </div>
+          <!-- 4th col-->
+          <div class="col-lg-4">
+            <h6 class="text-uppercase font-weight-bold mb-3">daily Offers & discounts</h6>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+            <div class="input-group">
+              <input 
+                type="email" 
+                class="main-box-shadow form-control bg-transparent border-dark border-right-0" 
+                placeholder="Your Email Address" 
+                aria-label="Your Email Address" 
+                aria-describedby="button-addon">
+              <div class="input-group-append">
+                <button class="btn btn-outline-dark border-left-0" type="submit" id="button-addon">
+                  <i class="fas fa-location-arrow"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- copyright section -->
+    <div class='copyright bg-dark py-4'>
+      <div class="container">
+        <div class="row py-1 text-center text-md-left">
+          <!-- 1st col-->
+          <div class="col-md-6">
+            <p class="mb-4 m-md-0 txt-sm">&copy; 2019 Your company. All rights reserved.</p>
+          </div>
+          <!-- 2nd col-->
+          <div class="col-md-6 d-md-flex align-items-center justify-content-end">
+            <p class="m-0">
+              <i class="fab fa-cc-visa mr-2"></i>
+              <i class="fab fa-cc-mastercard mr-2"></i>
+              <i class="fab fa-cc-paypal mr-2"></i>
+              <i class="fab fa-cc-amex "></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- google map script using maptiler & leaflet  -->
+<script>
+  var mymap = L.map('mapid').setView([40.7358 ,-74.0036], 16);
+L.tileLayer('https://api.maptiler.com/maps/voyager/{z}/{x}/{y}.png?key=3YL7fOXqG6PyskCDZQHT', {
+  attribution: '<a href="https://carto.com/" target="_blank">&copy; CARTO</a> <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+  maxZoom: 19,
+  id: 'mapbox/streets-v11',
+  tileSize: 512,
+  zoomOffset: -1,
+}).addTo(mymap);
+  // add marker 
+  var marker = L.marker([40.7358 ,-74.0036]).addTo(mymap);
+</script>
+
+<!-----------------  js for bootstrap 4 ---------------->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--
+  api key => AIzaSyBPtYiWVY1b2DGEezyfVjCU8gzvHZ-Stz8
+  
+-->
